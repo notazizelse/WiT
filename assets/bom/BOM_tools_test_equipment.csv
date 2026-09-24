@@ -1,0 +1,18 @@
+Item,Description,Qty,UnitPriceUSD,ExtPriceUSD,Supplier,Priority,Status,Notes
+Soldering station with hot air,Rework and hand assembly,1,0,0,-,OWNED,"Confirmed available. This is what makes the hand-solder list workable - LCC and castellated modules are comfortable with hot air."
+Bench power supply current-limited,0-30V 0-3A with current limit and readout,1,90,90,electron.uz / AliExpress,BUY FIRST,NEEDED,"THE priority purchase. First power-up: set 6V, limit 100mA, connect, watch the current. If it runs to the limit something is shorted and nothing is destroyed. Powering a first-run board from a battery gives you no such chance."
+ST-LINK V3 MINIE,SWD programmer and debugger,2,25,50,Mouser / LCSC / AliExpress,BUY FIRST,NEEDED,"Two so a failed one does not stop you. V3 is faster than V2 and adds a virtual COM port."
+Digital multimeter,Continuity diode test uA range,1,45,45,electron.uz,BUY FIRST,NEEDED,Shorts check before power and quiescent current after.
+Logic analyser 8ch 24MHz,Saleae-compatible clone,1,15,15,AliExpress,BUY FIRST,NEEDED,"Debugs I2C SPI and UART without an oscilloscope. Fifteen dollars and it will save you days."
+STM32F407VET6 dev board,"""Black board"" F407VET6",2,12,24,AliExpress,BUY FIRST,NEEDED,"THE single largest schedule lever. Write and debug 90% of the firmware while the PCB is in fabrication. Buy two."
+Oscilloscope 100MHz 2ch,Rigol DS1102Z-E or similar,1,400,400,Local / AliExpress,High,OPTIONAL,"Rail ripple, switcher behaviour, the radio TX current step. Very useful but the logic analyser covers most bring-up."
+Sensor breakout boards,SHT45 MS5611 ICM-42688 AS7331 TMP117 SAM-M10Q,6,15,90,AliExpress / SparkFun / Adafruit,High,NEEDED,Lets you write and test every driver on the dev board before the PCB exists. Order with the bare parts.
+Flux pen no-clean,Rework,2,8,16,electron.uz,High,NEEDED,-
+Isopropanol 99% + brushes,Cleaning after rework,1,10,10,Local pharmacy,High,NEEDED,-
+ESD tweezers fine and curved,Handling LGA parts,1,15,15,electron.uz / AliExpress,High,NEEDED,-
+USB microscope or 10x loupe,Solder joint inspection before power-up,1,40,40,AliExpress,High,NEEDED,Inspecting the LGA-14 IMU joints is otherwise guesswork.
+ESD mat and wrist strap,Handling the IMU and GNSS module,1,25,25,electron.uz,Medium,NEEDED,-
+Solder paste + stencil,Only if hand-assembling fine pitch,1,25,25,JLCPCB (order with boards),Medium,OPTIONAL,Order the stencil with the PCB if you plan any hand fine-pitch work.
+Domestic chest freezer,-18 to -30C cold soak,1,0,0,Borrow / existing,High,NEEDED,First thermal test. Good enough to find most cold failures.
+Dry ice,-78C cold soak,5,10,50,Local gas supplier,Medium,NEEDED,Realistic stratospheric cold soak for the final qualification test.
+Vacuum chamber + pump,Resin degassing chamber reaches ~50 mbar,1,120,120,AliExpress / local,Medium,OPTIONAL,"Verifies the MS5611 across most of its range and tests for outgassing and pressure-related failures."

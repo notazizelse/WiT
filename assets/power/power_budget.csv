@@ -1,0 +1,21 @@
+Load,Rail,AvgCurrent_mA,PeakCurrent_mA,DutyCycle,Phase,Notes
+STM32F407 @ 84 MHz,3V3,50,90,100%,All,Run at 84 MHz not 168. Halves the current and you have compute to spare without a camera.
+GNSS SAM-M10Q,3V3,25,35,100%,All,Continuous tracking. Do not duty-cycle - reacquisition costs more than it saves.
+Delock 12592 LoRa 868,3V3,12,120,~10% TX,All,120 mA the instant it keys up. Needs local ferrite + 10uF + 100uF bulk.
+MicoAir LR900-A,5V0,15,100,~10% TX,All,TX current UNCONFIRMED - published 300mW max does not resolve it. MEASURE ON ARRIVAL.
+SPS30 particulate,5V0,60,80,100% below 6km,Ascent <6km and descent <6km,Largest single load. Power OFF above 6 km - it is out of spec there anyway.
+ICM-42688-P IMU,3V3,0.9,1.2,100%,All,-
+MS5611 barometer,3V3,0.2,1.4,10%,All,1.4 mA only during conversion.
+SHT45 T/RH,3V3,0.1,0.4,5%,All,-
+TMP117 + 2x NTC,3V3,0.2,0.3,100%,All,-
+MAX31865 PT1000,3V3,3,4,100%,All,-
+MMC5983MA magnetometer,3V3,0.5,1,50%,All,Optional part.
+AS7331 UV,3V3,3,5,100%,All,-
+Geiger module,5V0,3,8,100%,All,HV boost draws little average current; pulses on each count.
+Memory under test + 2x INA226,V_MEM/3V3,12,25,100%,All,SPI SRAM active current during read/write phases.
+microSD logging,3V3,15,200,burst,All,200 mA write bursts. Schedule writes away from radio TX.
+LEDs,3V3,6,9,100%,Ground only,Disable in flight to save power and avoid confusing the thermal budget.
+TOTAL (sum of averages),3V3+5V0,199,669,-,-,Peaks are NOT simultaneous. Realistic worst case ~350 mA with interlocks in firmware.
+DESIGN TARGET,-,-,800,-,-,Size both rails for 800 mA so nothing operates near its limit in the cold.
+PACK DRAW at 6V 88% eff,VBAT,125,-,-,-,199 mA at 3.3V from a 6V pack at 88% converter efficiency.
+8-HOUR MISSION ENERGY,VBAT,-,-,-,-,~1000 mAh consumed against 3000 mAh available = 3x margin.

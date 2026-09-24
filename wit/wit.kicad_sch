@@ -1,0 +1,21 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "025fe650-4491-4bd3-b2cf-a96d9e05ece8")
+	(paper "A4")
+	(title_block
+		(title "WomenInTech Satellite Schem")
+		(date "2026-09-21")
+		(rev "A")
+		(company "WomenInTech")
+		(comment 1 "made by Azizbek N")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
